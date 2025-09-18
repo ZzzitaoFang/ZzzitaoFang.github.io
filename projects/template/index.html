@@ -9,7 +9,7 @@
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -43,9 +43,16 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/mathjax-config.js"></script>
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="static/js/citation.js" defer></script>
 </head>
 <body>
 
+  <a id="back-to-top-float" class="button is-dark is-rounded back-to-top-fixed" aria-label="Back to top">
+    <span class="icon"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
+  </a>
 
   <section class="hero">
     <div class="hero-body">
@@ -65,7 +72,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">Institution Name<br>Conference name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -106,14 +113,13 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a class="external-link button is-normal is-rounded is-dark" href="#citation-ref" title="Go to BibTeX">
+                    <span class="icon"><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                    <span>Citation</span>
+                  </a>
+                </span>
+
+
             </div>
           </div>
         </div>
@@ -242,7 +248,7 @@
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+          <video poster="" id="video3" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
@@ -274,14 +280,50 @@
 <!--End paper poster -->
 
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+<!-- BibTex citation -->
+<section class="section" id="citation-ref">
+  <div class="container is-max-desktop">
+
+    <div class="title-row">
+      <h2 class="title is-3 mb-0">BibTeX</h2>
+
+      <button id="copy-bib" class="copy-icon-btn" aria-label="Copy BibTeX" title="Copy BibTeX">
+        <span class="sr-only">Copy BibTeX</span>
+
+        <svg class="icon-copy" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="5" width="12" height="16" rx="2"></rect>
+            <path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2"></path>
+            <rect x="9" y="3" width="6" height="4" rx="1.2"></rect>
+          </g>
+        </svg>
+
+        <svg class="icon-checked" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="5" width="12" height="16" rx="2"></rect>
+            <path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2"></path>
+            <rect x="9" y="3" width="6" height="4" rx="1.2"></rect>
+            <path d="M9.2 12.8l2.1 2.1 4.1-4.1"></path>
+          </g>
+        </svg>
+      </button>
     </div>
+
+    <div class="content">
+      <p class="help is-size-7 has-text-grey"><em>Click anywhere on the box below to highlight complete record</em></p>
+      <pre id="bibtex" class="bibtex-box is-family-monospace"><code>@inproceedings{aaa,
+  title={Title},
+  author={Author},
+  booktitle={Booktitle},
+  year={Year},
+  url={URL}
+}</code></pre>
+
+      
+    </div>
+  </div>
 </section>
-<!--End BibTex citation -->
+<!-- End BibTex citation -->
 
 
   <footer class="footer">
