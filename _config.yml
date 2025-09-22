@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Homepage"
+title                    : "Zitao Fang (方子韬)"
 title_separator          : "-"
 name                     : &name "Zitao Fang"
 description              : &description "AI Undergraduate at Xiamen University Malaysia"
@@ -29,7 +29,7 @@ author:
   location         : "Earth"
   employer         : "Xiamen University Malaysia"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "ait2209071@xmu.edu.my" 
 
   # Academic websites
   academia         : # URL
@@ -47,7 +47,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/zzzitaofang/"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
